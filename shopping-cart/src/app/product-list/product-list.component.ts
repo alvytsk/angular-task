@@ -8,8 +8,20 @@ import { Product } from '../shared/product.model';
 })
 export class ProductListComponent implements OnInit {
   products: Product[] = [
-    new Product('Товар 1', 'Краткое описание товара', '', 25.0, 2),
-    new Product('Товар 2', 'Краткое описание товара', '', 44.3, 5)
+    new Product(
+      'Название товара',
+      'Краткое описание товара со всеми его прелестями ...',
+      'https://mdbootstrap.com/img/Photos/Others/images/16.jpg',
+      25.0,
+      0
+    ),
+    new Product(
+      'Название товара',
+      'Краткое описание товара со всеми его прелестями ...',
+      'https://mdbootstrap.com/img/Photos/Others/images/17.jpg',
+      44.3,
+      5
+    )
   ];
 
   constructor() {}

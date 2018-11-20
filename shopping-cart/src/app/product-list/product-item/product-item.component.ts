@@ -8,8 +8,21 @@ import { Product } from '../../shared/product.model';
 })
 export class ProductItemComponent implements OnInit {
   @Input() product: Product;
+  countVal: number;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.product.amount === 0 ? (this.countVal = 0) : (this.countVal = 1);
+  }
+
+  onMinusClick() {
+    this.countVal <= 0 ? (this.countVal = 0) : this.countVal--;
+  }
+
+  onPlusClick() {
+    this.countVal >= this.product.amount
+      ? (this.countVal = this.product.amount)
+      : this.countVal++;
+  }
 }

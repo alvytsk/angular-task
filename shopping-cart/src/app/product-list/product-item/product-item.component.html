@@ -1,5 +1,31 @@
-<p>{{ product.name }}</p>
-<p>{{ product.shortDescription }}</p>
-<p>{{ product.price }}</p>
-<p>{{ product.amount }}</p>
-<p>{{ product.imagePath }}</p>
+<div class="card">
+  <img
+    class="card-img-top"
+    src="{{ product.imagePath }}"
+    alt="{{ product.name }}"
+  />
+
+  <div class="card-body">
+    <div class="row no-gutters">
+      <div class="col-12 col-sm-6 col-md-8">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text small">{{ product.description }}</p>
+      </div>
+      <div class="col-6 col-md-4 text-center align-self-center">
+        <!-- plus minus element -->
+        <button (click)="onMinusClick()">-</button> {{ countVal }}
+        <button (click)="onPlusClick()">+</button>
+
+        <p>
+          <b>{{ countVal }} x {{ product.price }} Р</b>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item small text-muted">
+      Остаток на складе: {{ product.amount }}
+    </li>
+  </ul>
+</div>

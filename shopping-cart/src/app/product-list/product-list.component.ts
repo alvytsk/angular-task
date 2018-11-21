@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
       'Краткое описание товара со всеми его прелестями ...',
       'https://mdbootstrap.com/img/Photos/Others/images/16.jpg',
       25.0,
-      0
+      2
     ),
     new Product(
       'Название товара',

@@ -16,16 +16,14 @@
         <button (click)="onMinusClick()">-</button> {{ countVal }}
         <button (click)="onPlusClick()">+</button>
 
-        <p>
-          <b>{{ countVal }} x {{ product.price }} Р</b>
-        </p>
+        <p class="card-price">{{ countVal }} x {{ product.price }} &#x20bd;</p>
       </div>
     </div>
   </div>
 
   <ul class="list-group list-group-flush">
     <li class="list-group-item small text-muted">
-      Остаток на складе: {{ product.amount }}
+      *Остаток на складе: {{ product.amount }}
     </li>
   </ul>
 </div>

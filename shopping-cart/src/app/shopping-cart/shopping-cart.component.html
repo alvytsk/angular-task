@@ -1,3 +1,9 @@
-<p>
-  shopping-cart works!
-</p>
+<div
+  class="container"
+  cdkDropList
+  id="shoppingList"
+  [cdkDropListConnectedTo]="productList"
+  (cdkDropListDropped)="drop($event)"
+>
+  shopping-cart works
+</div>

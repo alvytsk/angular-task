@@ -33,9 +33,10 @@ export class ProductListComponent implements OnInit {
     console.log('ProductListComponent:', event);
     if (event.container.id === event.previousContainer.id) {
       // move inside same list
-      //moveItemInArray(this.list, event.previousIndex, event.currentIndex);
+      console.log(' %%%');
     } else {
       // move between lists
+      console.log(' ###');
     }
   }
 }

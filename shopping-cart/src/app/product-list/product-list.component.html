@@ -1,8 +1,8 @@
 <div
   class="container"
   cdkDropList
-  id="productList"
-  [cdkDropListConnectedTo]="shoppingList"
+  #productList="cdkDropList"
+  [cdkDropListConnectedTo]="[shoppingList]"
   (cdkDropListDropped)="drop($event)"
 >
   <app-product-item

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
+import { Product } from '../shared/product.model';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -7,6 +8,8 @@ import { CdkDragDrop } from '@angular/cdk/drag-drop';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
+  products: Product[] = [];
+
   constructor() {}
 
   ngOnInit() {}
@@ -15,7 +18,6 @@ export class ShoppingCartComponent implements OnInit {
     console.log('ShoppingCartComponent:', event);
     if (event.container.id === event.previousContainer.id) {
       // move inside same list
-      //moveItemInArray(this.list, event.previousIndex, event.currentIndex);
     } else {
       // move between lists
     }
